@@ -43,7 +43,7 @@ Projet d'apprentissage fullstack : API REST, React, routing, gestion d'état.
 ### Installation
 ```bash
 # 1. Clone le projet
-git clone https://github.com/TON_USERNAME/devblog.git
+git clone https://github.com/SHERKO10/devblog.git
 cd devblog
 
 # 2. Installe et lance le backend
