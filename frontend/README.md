@@ -1,36 +1,115 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# <DevBlog /> — Plateforme de blog fullstack
 
-## Getting Started
+Un blog technique moderne construit avec **Next.js**, **Node.js** et **SQLite**.
+Projet d'apprentissage fullstack : API REST, React, routing, gestion d'état.
 
-First, run the development server:
+![Next.js](https://img.shields.io/badge/Next.js-15-black?logo=next.js)
+![Node.js](https://img.shields.io/badge/Node.js-18+-green?logo=node.js)
+![React](https://img.shields.io/badge/React-19-blue?logo=react)
+![SQLite](https://img.shields.io/badge/SQLite-3-lightblue?logo=sqlite)
 
+---
+
+## ✨ Fonctionnalités
+
+- 📝 Création et édition d'articles en **Markdown** avec prévisualisation
+- 🗂️ Catégories et tags pour organiser les articles
+- 🔍 Recherche en temps réel et filtres par catégorie
+- 👁️ Compteur de vues par article
+- 🌙 Interface sombre moderne (dark mode)
+- 📱 Responsive mobile
+- ⚙️ Interface d'administration complète
+
+---
+
+## 🛠️ Technologies
+
+| Couche     | Technologie              |
+|------------|--------------------------|
+| Frontend   | Next.js 15, React 19     |
+| Styles     | Tailwind CSS             |
+| Backend    | Node.js, Express         |
+| Base de données | SQLite (better-sqlite3) |
+| HTTP Client | Fetch API natif         |
+
+---
+
+## 🚀 Lancer le projet en local
+
+### Prérequis
+- Node.js v18+
+- Git
+
+### Installation
 ```bash
+# 1. Clone le projet
+git clone https://github.com/TON_USERNAME/devblog.git
+cd devblog
+
+# 2. Installe et lance le backend
+cd backend
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# → http://localhost:5000
+
+# 3. Dans un nouveau terminal, installe et lance le frontend
+cd frontend
+npm install
+npm run dev
+# → http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### URLs
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+| URL | Description |
+|-----|-------------|
+| http://localhost:3000 | Page d'accueil du blog |
+| http://localhost:3000/admin | Interface d'administration |
+| http://localhost:5000/api/articles | API articles |
+| http://localhost:5000/api/categories | API catégories |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 📁 Structure du projet
+```
+devblog/
+├── backend/
+│   ├── controllers/    # Logique métier
+│   ├── database/       # SQLite + initialisation
+│   ├── models/         # Requêtes SQL
+│   ├── routes/         # Endpoints API
+│   └── server.js       # Point d'entrée
+└── frontend/
+    ├── app/            # Pages Next.js (App Router)
+    ├── components/     # Composants React
+    ├── hooks/          # Hooks personnalisés
+    └── services/       # Appels API
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📚 Ce que j'ai appris
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Architecture **fullstack** séparée frontend/backend
+- Création d'une **API REST** avec Express
+- **Routing dynamique** Next.js (App Router)
+- Différence **Server Components** vs **Client Components**
+- Gestion d'état React avec **useState** et **useEffect**
+- Hooks personnalisés React
+- Base de données **SQLite** avec requêtes SQL
+- Rendu **Markdown** côté client
+- Bonnes pratiques Git (**Conventional Commits**)
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🗺️ Améliorations futures
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [ ] Authentification (JWT)
+- [ ] Recherche full-text SQLite
+- [ ] Mode clair / sombre
+- [ ] Déploiement (Vercel + Railway)
+- [ ] Flux RSS
+
+---
+
+*Projet réalisé pour apprendre le développement fullstack avec Node.js et Next.js.*
