@@ -19,9 +19,9 @@ const Article = {
       LEFT JOIN categories c ON a.category_id = c.id
       WHERE a.published = 1
       ORDER BY a.created_at DESC
-    `).all()  -- .all() retourne un tableau de résultats
-  },
-
+    `).all()
+    },
+    
   // Récupère TOUS les articles (pour l'interface admin)
   findAll() {
     return db.prepare(`
@@ -47,7 +47,7 @@ const Article = {
       FROM articles a
       LEFT JOIN categories c ON a.category_id = c.id
       WHERE a.slug = ?
-    `).get(slug)  -- .get() retourne un seul résultat (ou undefined)
+    `).get(slug)  
 
     if (!article) return null
 
