@@ -1,0 +1,22 @@
+# Dépendances (bibliothèques installées - très lourdes, inutile de les commit)
+node_modules/
+
+# Variables d'environnement (contient des secrets !)
+.env
+.env.local
+
+# Fichiers de build Next.js (générés automatiquement)
+.next/
+out/
+
+# Base de données locale (propre à chaque machine)
+*.sqlite
+*.db
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
